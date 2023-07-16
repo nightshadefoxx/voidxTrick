@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Piggy Build Mode Tricks | Cool Neon Themed Website</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navigation Menu */
+        nav {
+            background-color: #000;
+            height: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        ul.menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul.menu li {
+            display: inline;
+        }
+        
+        ul.menu li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        
+        ul.menu li a:hover {
+            color: #66ccff;
+        }
+        
+        /* Header Section */
+        header {
+            background-color: #000;
+            padding: 100px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #66ccff;
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        /* Trick Section */
+        section {
+            padding: 100px;
+            text-align: center;
+            background-color: #000;
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #66ccff;
+        }
+        
+        p.trick-description {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        .trick {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            background-color: #66ccff;
+            color: #000;
+            text-decoration: none;
+            font-size: 24px;
+            transition: background-color 0.3s;
+            box-shadow: 0 0 10px #66ccff;
+            text-shadow: none;
+            cursor: pointer;
+        }
+        
+        .trick:hover {
+            background-color: #000;
+            color: #66ccff;
+        }
+        
+        .trick-info {
+            display: none;
+            margin-top: 20px;
+            color: #fff;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .watch-video {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .watch-video-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #66ccff;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            box-shadow: 0 0 10px #66ccff;
+        }
+        
+        .watch-video-button:hover {
+            background-color: #000;
+            color: #66ccff;
+        }
+    </style>
+    <script>
+        // Function to toggle the visibility of trick information and watch video link
+        function toggleTrickInfo(trickId) {
+            var trickInfo = document.getElementById(trickId);
+            var watchVideo = document.getElementById(trickId + "-video");
+            if (trickInfo.style.display === "none") {
+                trickInfo.style.display = "block";
+                watchVideo.style.display = "block";
+            } else {
+                trickInfo.style.display = "none";
+                watchVideo.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#tricks">Build Mode Tricks</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>VOIDX BUILD MODE TRICKS</h1>
+        <p>Voidx has made lots of cool build mode tricks but on this website he will show you them! [WEBSITE IN BETA]</p>
+    </header>
+    
+    <section id="tricks">
+        <h2>Voidx build tricks</h2>
+        <p class="trick-description">Discover these awesome tricks to create amazing environments in Piggy:</p>
+        <div>
+            <a class="trick" onclick="toggleTrickInfo('trick1')">Trick 1</a>
+            <p class="trick-info" id="trick1">Bed offset</p>
+            <div class="watch-video" id="trick1-video">
+                <a class="watch-video-button" href="https://www.youtube.com/watch?v=-YEu4ECVlaE" target="_blank">Watch Video</a>
+            </div>
+        </div>
+        <div>
+            <a class="trick" onclick="toggleTrickInfo('trick2')">Trick 2</a>
+            <p class="trick-info" id="trick2">A Guide to Map Layouts | Piggy Build Mode</p>
+            <div class="watch-video" id="trick2-video">
+                <a class="watch-video-button" href="https://www.youtube.com/watch?v=HRAi-elJsWA" target="_blank">Watch Video</a>
+            </div>
+        </div>
+        <div>
+            <a class="trick" onclick="toggleTrickInfo('trick3')">Trick 3</a>
+            <p class="trick-info" id="trick3">forrest tricks</p>
+            <div class="watch-video" id="trick3-video">
+                <a class="watch-video-button" href="https://www.youtube.com/watch?v=P1DclD6w-lE" target="_blank">Watch Video</a>
+            </div>
+        </div>
+        <div>
+            <a class="trick" onclick="toggleTrickInfo('trick4')">Trick 4</a>
+            <p class="trick-info" id="trick4">3 Factory Tips & Tricks | Piggy Build Mode.</p>
+            <div class="watch-video" id="trick4-video">
+                <a class="watch-video-button" href="https://www.youtube.com/watch?v=z5CWwmClKKk" target="_blank">Watch Video</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
